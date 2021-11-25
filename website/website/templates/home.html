@@ -1,0 +1,306 @@
+{% load static %}
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <title>LondonAttractions</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+.card {
+      box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+}
+
+
+
+</style>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <i class='fas fa-passport' style='font-size:20px; color:yellow'></i>
+    <p>&nbsp;&nbsp;</p>
+    <h5 class="display-5 text-capitalize" style="color: white">London Attractions</h5>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link"><i class="fa fa-facebook text-primary"></i></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link"><i class="fa fa-twitter text-info"></i></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link"><i class="fa fa-instagram text-danger"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mx-auto my-3">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12">
+
+            <div class="card">
+                <div class="card-title d-flex justify-content-center mb-1 pt-3">
+                    <h3 class="font-weight-light" style="color: blue"> Please select your requirements!</h3>
+                </div>
+                <hr class="solid">
+                <div class="card-body">
+                    <form id="searchForm" action="{% url 'search' %}">
+                        <div class="row">
+
+                            <div class="col-sm-3">
+                                <div class="col d-flex justify-content-center">
+                                    <i class='fas fa-map-marked-alt' style='font-size:20px'></i>
+                                    <p>&nbsp</p>
+                                    <p>Attraction*</p>
+                                </div>
+                                <select class="custom-select" id="attractions">
+                                    <option value="none">--select--</option>
+                                    <option value="Natural">Natural</option>
+                                    <option value="ManMade">ManMade</option>
+                                    <option value="Adventure">Adventure</option>
+                                    <option value="SpecialEvents">SpecialEvents</option>
+                                    <option value="Sport">Sport</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="col d-flex justify-content-center">
+                                    <i class='fas fa-bus-alt' style='font-size:20px'></i>
+                                    <p>&nbsp</p>
+                                    <p>Transport</p>
+                                </div>
+                                <select class="custom-select" id="transportSelect">
+                                    <option value="none">--select--</option>
+                                    <option value="rail">Rail</option>
+                                    <option value="tube">Tube</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="col d-flex justify-content-center">
+                                    <i class='fas fa-ticket-alt' style='font-size:20px'></i>
+                                    <p>&nbsp</p>
+                                    <p>Fare</p>
+                                </div>
+                                <select class="custom-select" id="fareSelect">
+                                    <option value="none">--select--</option>
+                                    <option value="free">Free</option>
+                                    <option value="chargeable">Chargeable</option>
+                                    <option value="concession">Concession</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="col d-flex justify-content-center">
+                                    <i class='fas fa-cocktail' style='font-size:20px'></i>
+                                    <p>&nbsp</p>
+                                    <p>Entertainment</p>
+                                </div>
+                                <select class="custom-select" id="entertainment">
+                                    <option value="none">--select--</option>
+                                    <option value="cafe">Cafe</option>
+                                    <option value="restaurant">Restaurant</option>
+                                    <option value="bar">Bar</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-2">
+                                 <div class="col d-flex justify-content-center">
+                                    <i class='fas fa-restroom' style='font-size:20px'></i>
+                                    <p>&nbsp</p>
+                                    <p>Utilities</p>
+                                </div>
+                                <select class="custom-select" id="waitingRoom">
+                                    <option value="none">--select--</option>
+                                    <option value="washRoom">WashRoom</option>
+                                    <option value="feedingRoom">FeedingRoom</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="class-footer d-flex justify-content-center mb-3">
+                    <div class="col-md-4">
+                        <button id="search" type="button" class="btn btn-primary btn-md btn-block">Search</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12 pt-2 pb-3">
+    <hr class="solid">
+</div>
+
+<div class="container">
+    <div class="row" id="display">
+        <!--        <div class="col-md-6 mb-3">-->
+        <!--            <div class="card">-->
+        <!--                <div class="card-body">-->
+        <!--                    <h5 class="card-title">Heading</h5>-->
+        <!--                    <p>highlight</p>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+    </div>
+</div>
+
+<br>
+<br>
+
+
+<script type="text/javascript">
+
+     $( window ).on( "load", function(){
+        console.log(document.querySelector('#display'));
+     });
+
+    $("body").on("click", "#search", function() {
+        document.querySelector('#display').innerHTML = "";
+        var model = createModel();
+        console.log(model);
+        $.ajax({
+            type: 'POST',
+            url: 'search/',
+            data: model,
+            success: function(res) {
+                 console.log("SUCCESS");
+                 var displayData = JSON.parse(res);
+                 console.log("RESPONSE FROM DJANGO");
+                 console.log(displayData);
+                 display(displayData);
+            }
+        });
+    });
+
+    function createModel() {
+        var attractions = document.getElementById('attractions');
+        var attraction = attractions.options[attractions.selectedIndex].value
+        var transportSelect = document.getElementById('transportSelect');
+        var transport = transportSelect.options[transportSelect.selectedIndex].value
+        var fareSelect = document.getElementById('fareSelect');
+        var fare = fareSelect.options[fareSelect.selectedIndex].value
+        var entertainment = document.getElementById('entertainment');
+        var enter = entertainment.options[entertainment.selectedIndex].value
+        var waitingRoom = document.getElementById('waitingRoom');
+        var room = waitingRoom.options[waitingRoom.selectedIndex].value
+
+        return {
+            'attractions': attraction,
+            'transport': transport,
+            'fare': fare,
+            'entertainment': enter,
+            'room': room,
+        };
+    }
+
+    function display(displayData) {
+        console.log(displayData)
+        var dynamic = document.querySelector('#display');
+        for (var i=0; i<displayData.length; i++) {
+            var fetch = dynamic.innerHTML;
+            var id = displayData[i].id.value
+            var name = displayData[i].name.value
+            var highlight = displayData[i].highlight.value
+            var location = displayData[i].location.value
+
+            createCard(dynamic, id, name, highlight, location);
+        }
+    }
+
+    function createCard(dynamic, id, name, highlight, location) {
+        const div = document.createElement('div');
+        div.className = "col-md-6 mb-3";
+
+        const card = document.createElement('div');
+        card.className = "card";
+
+        const image = document.createElement('img');
+        image.className = "card-img-top";
+        var img = `static/images/${id}.jpg`;
+        image.src = img;
+        card.appendChild(image);
+
+        const cardBody = document.createElement('div');
+        cardBody.className = "card-body";
+
+        const justContent = document.createElement('div');
+        justContent.className = "row justify-content-center";
+        const title = document.createElement('h5');
+        title.innerText = name;
+        justContent.appendChild(title);
+
+        const para = document.createElement('p');
+        para.className = "font-weight-bold";
+        para.innerText = "Why go?";
+
+        const attHighlight = document.createElement('div');
+        attHighlight.className = "row";
+
+        const attHigh = document.createElement('p');
+        const italicHighlight = document.createElement('em');
+        italicHighlight.innerText = '"' + highlight + '"';
+        attHigh.appendChild(italicHighlight);
+
+        const breakerDiv = document.createElement('div');
+        attHighlight.className = "row";
+        const breaker = document.createElement('br');
+        breakerDiv.appendChild(breaker);
+
+        const locPara = document.createElement('p');
+        const insText = document.createElement('ins');
+        insText.innerText = location;
+        locPara.appendChild(insText);
+
+        const locIcon = document.createElement('i');
+        locIcon.className = "fas fa-map-marker-alt";
+        locIcon.style.cssText = "font-size:20px; color:red";
+
+        attHighlight.appendChild(attHigh);
+        attHighlight.appendChild(breakerDiv);
+        attHighlight.appendChild(locIcon);
+        attHighlight.appendChild(locPara);
+
+        cardBody.appendChild(justContent);
+        cardBody.appendChild(para);
+        cardBody.appendChild(attHighlight);
+
+        card.appendChild(cardBody);
+        div.appendChild(card);
+        dynamic.appendChild(div);
+    }
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
