@@ -1,0 +1,12 @@
+
+
+1. Install Apache Jena Fuseki server into the local machine.
+2. Create a database and upload the londonAttraction.owl file.
+3. Install and configure python.
+4. Install any python IDE to visualize the code (Optional).
+   My suggestion -> PyCharm
+5. Install git into the local machine.
+6. Clone the github repository and to make available into the local machine.
+7. Run the Django server -> python manage.py runserver
+8. http://localhost:8000/
+9. Play with different filters and you can experience the ouputs.

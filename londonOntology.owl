@@ -1,0 +1,544 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/londonattractionontology#"
+     xml:base="http://www.semanticweb.org/londonattractionontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:attractionontology="http://www.semanticweb.org/vishnupv/ontologies/2021/10/attractionontology#"
+     xmlns:londonattractionontology="http://www.semanticweb.org/londonattractionontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/londonattractionontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#entertainBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/londonattractionontology#entertainBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Attraction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/londonattractionontology#Entertainment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#hasAccessBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/londonattractionontology#hasAccessBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Attraction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/londonattractionontology#Transport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#hasFacilityOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/londonattractionontology#hasFacilityOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Attraction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/londonattractionontology#RestRoom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vishnupv/ontologies/2021/10/attractionontology#hasFare -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vishnupv/ontologies/2021/10/attractionontology#hasFare">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Attraction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/londonattractionontology#Ticket"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/londonattractionontology#id">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Adventure"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#ManMade"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Natural"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#SpecialEvents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Sport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vishnupv/ontologies/2021/10/attractionontology#highlight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vishnupv/ontologies/2021/10/attractionontology#highlight">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Adventure"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#ManMade"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Natural"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#SpecialEvents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Sport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vishnupv/ontologies/2021/10/attractionontology#isAvailable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vishnupv/ontologies/2021/10/attractionontology#isAvailable">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Bar"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Chargeable"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Concession"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#FeedingRoom"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#NonChargeable"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Rail"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Tube"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#WashRoom"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vishnupv/ontologies/2021/10/attractionontology#location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vishnupv/ontologies/2021/10/attractionontology#location">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Adventure"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#ManMade"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Natural"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#SpecialEvents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Sport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vishnupv/ontologies/2021/10/attractionontology#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vishnupv/ontologies/2021/10/attractionontology#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Adventure"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#ManMade"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Natural"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#SpecialEvents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/londonattractionontology#Sport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#Adventure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#Adventure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/londonattractionontology#Attraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#Attraction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#Attraction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#Bar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#Bar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/londonattractionontology#Entertainment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#Chargeable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#Chargeable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/londonattractionontology#Ticket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#Concession -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#Concession">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/londonattractionontology#Ticket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#Entertainment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#Entertainment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#FeedingRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#FeedingRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/londonattractionontology#RestRoom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#ManMade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#ManMade">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/londonattractionontology#Attraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#Natural -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#Natural">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/londonattractionontology#Attraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#NonChargeable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#NonChargeable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/londonattractionontology#Ticket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#Rail -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#Rail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/londonattractionontology#Transport"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#RestRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#RestRoom"/>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#Restaurant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#Restaurant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/londonattractionontology#Entertainment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#SpecialEvents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#SpecialEvents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/londonattractionontology#Attraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#Sport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#Sport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/londonattractionontology#Attraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#Ticket -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#Ticket"/>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#Transport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#Transport"/>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#Tube -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#Tube">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/londonattractionontology#Transport"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#WashRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/londonattractionontology#WashRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/londonattractionontology#RestRoom"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#attraction01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#attraction01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#ManMade"/>
+        <entertainBy rdf:resource="http://www.semanticweb.org/londonattractionontology#bar"/>
+        <entertainBy rdf:resource="http://www.semanticweb.org/londonattractionontology#restaurant"/>
+        <hasAccessBy rdf:resource="http://www.semanticweb.org/londonattractionontology#tube"/>
+        <hasFacilityOf rdf:resource="http://www.semanticweb.org/londonattractionontology#washRoom"/>
+        <attractionontology:hasFare rdf:resource="http://www.semanticweb.org/londonattractionontology#chargeable"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">01</id>
+        <attractionontology:highlight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The floor-to-ceiling windows allow exceptional views out across the capital, especially on a clear day.</attractionontology:highlight>
+        <attractionontology:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SE1 9QU</attractionontology:location>
+        <attractionontology:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The View from the Shard</attractionontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#attraction02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#attraction02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#Adventure"/>
+        <entertainBy rdf:resource="http://www.semanticweb.org/londonattractionontology#bar"/>
+        <hasAccessBy rdf:resource="http://www.semanticweb.org/londonattractionontology#tube"/>
+        <attractionontology:hasFare rdf:resource="http://www.semanticweb.org/londonattractionontology#chargeable"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">02</id>
+        <attractionontology:highlight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For an incredible 360-degree view – and that adorable climbing onesie.</attractionontology:highlight>
+        <attractionontology:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SE10 0DX</attractionontology:location>
+        <attractionontology:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Up at The 02</attractionontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#attraction03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#attraction03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#Sport"/>
+        <hasAccessBy rdf:resource="http://www.semanticweb.org/londonattractionontology#rail"/>
+        <hasAccessBy rdf:resource="http://www.semanticweb.org/londonattractionontology#tube"/>
+        <attractionontology:hasFare rdf:resource="http://www.semanticweb.org/londonattractionontology#nonChargeable"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">03</id>
+        <attractionontology:highlight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two things: the view and the slide. Hold on to your stomach and enjoy the speedy descent down the 12-loop corkscrew.</attractionontology:highlight>
+        <attractionontology:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E20 2AD</attractionontology:location>
+        <attractionontology:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ArcelorMittal Orbit and slide</attractionontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#attraction04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#attraction04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#ManMade"/>
+        <hasAccessBy rdf:resource="http://www.semanticweb.org/londonattractionontology#tube"/>
+        <hasFacilityOf rdf:resource="http://www.semanticweb.org/londonattractionontology#washRoom"/>
+        <attractionontology:hasFare rdf:resource="http://www.semanticweb.org/londonattractionontology#chargeable"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">04</id>
+        <attractionontology:highlight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The location. Not only does it offer a great view of the capital, but there are oodles of top attractions nearby.</attractionontology:highlight>
+        <attractionontology:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SE1 7PB</attractionontology:location>
+        <attractionontology:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">London Eye</attractionontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#attraction05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#attraction05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#ManMade"/>
+        <entertainBy rdf:resource="http://www.semanticweb.org/londonattractionontology#bar"/>
+        <entertainBy rdf:resource="http://www.semanticweb.org/londonattractionontology#restaurant"/>
+        <hasAccessBy rdf:resource="http://www.semanticweb.org/londonattractionontology#tube"/>
+        <hasFacilityOf rdf:resource="http://www.semanticweb.org/londonattractionontology#washRoom"/>
+        <attractionontology:hasFare rdf:resource="http://www.semanticweb.org/londonattractionontology#chargeable"/>
+        <attractionontology:hasFare rdf:resource="http://www.semanticweb.org/londonattractionontology#concession"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">05</id>
+        <attractionontology:highlight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To see Gothic grandeur in all its splendour.</attractionontology:highlight>
+        <attractionontology:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SW1P 3PA</attractionontology:location>
+        <attractionontology:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westminster Abbey</attractionontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#attraction06 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#attraction06">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#ManMade"/>
+        <hasAccessBy rdf:resource="http://www.semanticweb.org/londonattractionontology#tube"/>
+        <hasFacilityOf rdf:resource="http://www.semanticweb.org/londonattractionontology#washRoom"/>
+        <attractionontology:hasFare rdf:resource="http://www.semanticweb.org/londonattractionontology#chargeable"/>
+        <attractionontology:hasFare rdf:resource="http://www.semanticweb.org/londonattractionontology#concession"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">06</id>
+        <attractionontology:highlight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To snoop around the most famous royal residence in the world.</attractionontology:highlight>
+        <attractionontology:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SW1A 1AA</attractionontology:location>
+        <attractionontology:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buckingham Palace</attractionontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#attraction07 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#attraction07">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#ManMade"/>
+        <entertainBy rdf:resource="http://www.semanticweb.org/londonattractionontology#restaurant"/>
+        <hasAccessBy rdf:resource="http://www.semanticweb.org/londonattractionontology#rail"/>
+        <hasFacilityOf rdf:resource="http://www.semanticweb.org/londonattractionontology#washRoom"/>
+        <attractionontology:hasFare rdf:resource="http://www.semanticweb.org/londonattractionontology#chargeable"/>
+        <attractionontology:hasFare rdf:resource="http://www.semanticweb.org/londonattractionontology#concession"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">07</id>
+        <attractionontology:highlight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To get lost in the Royal Maze.</attractionontology:highlight>
+        <attractionontology:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KT8 9AU</attractionontology:location>
+        <attractionontology:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hampton Court Palace</attractionontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#attraction08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#attraction08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#ManMade"/>
+        <entertainBy rdf:resource="http://www.semanticweb.org/londonattractionontology#bar"/>
+        <entertainBy rdf:resource="http://www.semanticweb.org/londonattractionontology#restaurant"/>
+        <hasAccessBy rdf:resource="http://www.semanticweb.org/londonattractionontology#tube"/>
+        <attractionontology:hasFare rdf:resource="http://www.semanticweb.org/londonattractionontology#chargeable"/>
+        <attractionontology:hasFare rdf:resource="http://www.semanticweb.org/londonattractionontology#concession"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">08</id>
+        <attractionontology:highlight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For a dazzling combo of history, politics and architecture.</attractionontology:highlight>
+        <attractionontology:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SW1A 0AA</attractionontology:location>
+        <attractionontology:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Houses of Parliament</attractionontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#attraction09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#attraction09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#ManMade"/>
+        <entertainBy rdf:resource="http://www.semanticweb.org/londonattractionontology#restaurant"/>
+        <hasAccessBy rdf:resource="http://www.semanticweb.org/londonattractionontology#tube"/>
+        <hasFacilityOf rdf:resource="http://www.semanticweb.org/londonattractionontology#feedingRoom"/>
+        <hasFacilityOf rdf:resource="http://www.semanticweb.org/londonattractionontology#washRoom"/>
+        <attractionontology:hasFare rdf:resource="http://www.semanticweb.org/londonattractionontology#chargeable"/>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">09</id>
+        <attractionontology:highlight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To snap a selfie with all the famous faces. Instagram, incoming.</attractionontology:highlight>
+        <attractionontology:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NW1 5LR</attractionontology:location>
+        <attractionontology:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madame Tussauds</attractionontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#bar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#bar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#Bar"/>
+        <attractionontology:isAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</attractionontology:isAvailable>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#chargeable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#chargeable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#Chargeable"/>
+        <attractionontology:isAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</attractionontology:isAvailable>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#concession -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#concession">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#Concession"/>
+        <attractionontology:isAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</attractionontology:isAvailable>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#feedingRoom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#feedingRoom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#FeedingRoom"/>
+        <attractionontology:isAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</attractionontology:isAvailable>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#nonChargeable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#nonChargeable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#NonChargeable"/>
+        <attractionontology:isAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</attractionontology:isAvailable>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#rail -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#rail">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#Rail"/>
+        <attractionontology:isAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</attractionontology:isAvailable>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#Restaurant"/>
+        <attractionontology:isAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</attractionontology:isAvailable>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#tube -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#tube">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#Tube"/>
+        <attractionontology:isAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</attractionontology:isAvailable>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/londonattractionontology#washRoom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/londonattractionontology#washRoom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/londonattractionontology#WashRoom"/>
+        <attractionontology:isAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</attractionontology:isAvailable>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
